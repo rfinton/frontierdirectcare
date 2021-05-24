@@ -1,0 +1,133 @@
+@import "/css/normalize.css";
+@import "/css/main.css";
+
+$josefin-sans: 'Josefin Sans', sans-serif;
+$fdc-orange: rgb(235, 152, 71);
+$fdc-orange-2: rgba(235, 152, 71, .5);
+$fdc-grey: #8c8c8c;
+$fdc-teal: #187994;
+$fdc-teal-2: rgba(24, 121, 148, .5);
+$background-image: 'https://frontierdirectcare.s3.amazonaws.com/img/AdobeStock_350230749.jpeg';
+
+body {
+  font-family: $josefin-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  @media screen and (max-width: 500px) {
+    background-image: none;
+    background-color: $fdc-orange;
+    min-height: initial;
+  }
+
+  header {
+    padding: 1em;
+    text-align: center;
+    background-color: $fdc-orange;
+    text-align: center;
+
+    .logo {
+      max-width: 240px;
+    }
+  }
+
+  main {
+    background-image: linear-gradient($fdc-teal-2, $fdc-teal-2), url($background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex: 1;
+
+    & > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3em;
+      padding: 2em 0;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      & > section:first-of-type {
+        #video {
+          display: inline-block;
+          max-width: 640px;
+          width: 100%;
+          margin-bottom: 2em;
+          border: solid 1em #fff;
+  
+          iframe {
+            width: 100%;
+          }
+        }
+      }
+  
+      & > section:last-of-type {
+        padding: 2em;
+        background-color: rgba(239, 230, 217, 0.8);
+  
+        @media screen and (max-width: 768px) {
+          padding: 1em;
+        }
+  
+        text-align: center;
+  
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+        }
+  
+        h3 {
+          font-size: 1.3em;
+        }
+  
+        hr { 
+          background: #fff;
+          opacity: .5;
+          border-color: #fff;
+        }
+  
+        p {
+          font-size: 1.3em;
+          max-width: 500px;
+          margin: auto;
+          margin: 1em auto;
+          text-align: left;
+        } 
+  
+        form {
+          input[type="text"] {
+            padding: 6px;
+            margin: 6px;
+          }
+  
+          #sender-info > div,
+          #recipient-info > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+  
+            @media screen and (max-width: 500px) {
+              grid-template-columns: 1fr;
+            }
+          }
+  
+          .submit-btn .btn.btn-lg {
+            margin-top: 1.5em;
+            background-color: $fdc-teal;
+            color: #fff;
+            border-color: $fdc-teal;
+          }
+        }      
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 2em;
+    color: #fff;
+    background-color: $fdc-orange;
+  }
+}

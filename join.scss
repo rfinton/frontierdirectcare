@@ -1,0 +1,172 @@
+@import "/css/normalize.css";
+@import "/css/main.css";
+
+$josefin-sans: 'Josefin Sans', sans-serif;
+$fdc-orange: rgb(235, 152, 71);
+$fdc-orange-2: rgba(235, 152, 71, .5);
+$fdc-grey: #8c8c8c;
+$fdc-teal: #187994;
+$fdc-teal-2: rgba(24, 121, 148, .5);
+$background-image: 'https://frontierdirectcare.s3.amazonaws.com/img/AdobeStock_350230749.jpeg';
+
+body {
+  font-family: $josefin-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+
+  @media screen and (max-width: 500px) {
+    background-image: none;
+    background-color: $fdc-orange;
+    min-height: initial;
+  }
+
+  header {
+    padding: 1em;
+    background-color: $fdc-orange;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .logo {
+      max-width: 240px;
+      margin: 1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+
+  main {
+    background-image: linear-gradient($fdc-teal-2, $fdc-teal-2), url($background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 2rem 0;
+    background-color: $fdc-teal-2;
+    flex: 1;
+    width: 100%;
+
+    & > div.container {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3em;
+      padding: 1em;
+      
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      & > section:first-of-type {
+        #video {
+          display: inline-block;
+          max-width: 640px;
+          width: 100%;
+          margin-bottom: 2em;
+
+          iframe {
+            width: 100%;
+          }
+        }
+      }
+
+      & > section:last-of-type {
+        padding: 2em;
+        background-color: rgba(239, 230, 217, 0.8);
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+          padding: 1em;
+        }
+
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+        }
+
+        h3 {
+          font-size: 1.3em;
+        }
+
+        hr { 
+          background: #fff;
+          opacity: .5;
+          border-color: #fff;
+        }
+
+        p {
+          font-size: 1.3em;
+          max-width: 500px;
+          margin: auto;
+          margin: 1em auto;
+          text-align: left;
+        }
+
+        .benefits {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          color: $fdc-teal;
+          padding: 0 1rem;
+
+          @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+          }
+          
+          .fas {
+            font-size: 4em;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+
+        .fieldset {
+          padding: 1em;
+          border: groove 3px;
+          border-radius: 6px;
+          margin: 0 0 2em;
+
+          @media screen and (max-width: 500px) {
+            text-align: left;
+          }
+
+          .form-check {
+            display: inline-block;
+            margin: 0.5em;
+
+            input {
+              margin-right: 1em;
+            }
+
+            label {
+              vertical-align: text-top;
+            }
+          }
+        }
+
+        .btn.btn-lg {
+          width: 100%;
+          background-color: $fdc-teal;
+          color: #fff;
+          border-color: $fdc-teal;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $fdc-orange;
+    text-align: center;
+    padding: 2em;
+    color: #fff;
+    width: 100%;
+  }
+}

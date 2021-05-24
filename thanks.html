@@ -1,0 +1,67 @@
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frontier Direct | Referal Program</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/59f79134d0e628affa90cb66/1524019783394-AXQVLKW3CVB7BD6MNE8P/ke17ZwdGBToddI8pDm48kHldqyjDwaeS7kYSmaCmglZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmxIv-U8QkF7Aqck8oUqvfAAOvy8DUzW3k1lLKw2Wu7uCpNBpi2q7oKJPU7loduYjD/favicon.ico?format=100w">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://s3.amazonaws.com/frontierdirectcare/img/F_Logo_Blue-08.png" 
+      alt="Frontier Direct Care" />
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div id="video">
+          <script>
+            var containerWidth = document.querySelector('section').getBoundingClientRect().width;
+            var video = '<iframe title="vimeo-player" src="https://player.vimeo.com/video/220896892" width="640" height="360" frameborder="0" allowfullscreen></iframe>';
+            var width, height;
+            
+            if(containerWidth < 640) {
+              width = containerWidth;
+              height = Math.round(width / 1.778);
+              video = video.replace('640', width);
+              video = video.replace('360', height);
+            }
+
+            document.write(video);
+          </script>
+        </div>
+      </section>
+      <section class="thank-you-section">
+        <h2>Thanks ##firstname##!</h2>
+        <p>We'll be reaching out to the contact you provided via email with information about the benefits of becoming a Frontier Direct Care member.</p>
+        <p>You'll receive a credit towards your account in the amount of $50 if they decide to become a member.</p>
+        <p>Thanks for participating in our program and feel free to return to previous page to enter more referrals!</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <a href="https://twitter.com/FrontierDirect"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:info@frontierdirectcare.com"><i class="far fa-envelope"></i></a>
+      <a href="https://www.facebook.com/doclazz/"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <div>
+      Copyright 2018-2020 Frontier Direct Care PLLC. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
