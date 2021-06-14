@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Frontier Direct | Referal Program</title>
-  <meta name="description" content="">
+  <title>Frontier Direct Care</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/59f79134d0e628affa90cb66/1524019783394-AXQVLKW3CVB7BD6MNE8P/ke17ZwdGBToddI8pDm48kHldqyjDwaeS7kYSmaCmglZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmxIv-U8QkF7Aqck8oUqvfAAOvy8DUzW3k1lLKw2Wu7uCpNBpi2q7oKJPU7loduYjD/favicon.ico?format=100w">
+  <link 
+    rel="icon" 
+    type="image/x-icon" 
+    href="https://images.squarespace-cdn.com/content/v1/59f79134d0e628affa90cb66/1524019783394-AXQVLKW3CVB7BD6MNE8P/ke17ZwdGBToddI8pDm48kHldqyjDwaeS7kYSmaCmglZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmxIv-U8QkF7Aqck8oUqvfAAOvy8DUzW3k1lLKw2Wu7uCpNBpi2q7oKJPU7loduYjD/favicon.ico?format=100w"
+  >
 
   <!-- Place favicon.ico in the root directory -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,7 +27,11 @@
 <body>
 
   <header>
-    <img class="logo" src="https://rfinton.github.io/frontierdirectcare/img/F_Logo_Blue-08.png" alt="Frontier Direct Care" />
+    <img 
+      class="logo" 
+      src="https://rfinton.github.io/frontierdirectcare/img/F_Logo_Blue-08.png" 
+      alt="Frontier Direct Care"
+    />
     <div>
       <h1>We're Changing Healthcare</h1>
       <h2>Join the movement</h2>
@@ -32,25 +39,20 @@
   </header>
 
   <main>
-
+    <header>
+      Welcome ##firstname##!
+    </header>
     <div class="container">
-
       <section>
-        <div id="video">
-          <script>
-            var containerWidth = document.querySelector('section').getBoundingClientRect().width;
-            var video = '<iframe title="vimeo-player" src="https://player.vimeo.com/video/220896892" width="640" height="360" frameborder="0" allowfullscreen></iframe>';
-            var width, height;
-            
-            if(containerWidth < 640) {
-              width = containerWidth;
-              height = Math.round(width / 1.778);
-              video = video.replace('640', width);
-              video = video.replace('360', height);
-            }
-  
-            document.write(video);
-          </script>
+        <div class="video-wrap">
+          <iframe 
+            title="vimeo-player" 
+            src="https://player.vimeo.com/video/220896892" 
+            width="640" 
+            height="360" 
+            frameborder="0" 
+            allowfullscreen
+          ></iframe>
         </div>
       </section>
   
@@ -69,7 +71,10 @@
           </div>
           <div>
             <i class="fas fa-calendar-alt"></i>
-            <p>Unlimited office visits, no waiting &amp; <span style="white-space: nowrap;">NO co-pay</span></p>
+            <p>
+              Unlimited office visits, no waiting &amp; 
+              <span style="white-space: nowrap;">NO co-pay</span>
+            </p>
           </div>
           <div>
             <i class="fas fa-syringe"></i>
@@ -115,14 +120,16 @@
                 <label class="form-check-label" for="business"> Business </label>
               </div>
             </div>
-            <input type="submit" class="btn btn-lg" data-mdb-ripple-color="#000000" value="Be a Member">
+            <input 
+              type="submit" 
+              class="btn btn-lg" 
+              data-mdb-ripple-color="#000000" 
+              value="Be a Member"
+            >
           </form>
         </div>
-  
       </section>
-
     </div>
-
   </main>
 
   <footer>

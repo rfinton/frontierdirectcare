@@ -1,0 +1,142 @@
+@import "/css/normalize.css";
+@import "/css/main.css";
+
+$josefin-sans: 'Josefin Sans', sans-serif;
+$fdc-orange: rgb(235, 152, 71);
+$fdc-orange-2: rgba(235, 152, 71, .5);
+$fdc-grey: #8c8c8c;
+$fdc-teal: #187994;
+$fdc-teal-2: rgba(24, 121, 148, .5);
+$background-image: 'https://rfinton.github.io/frontierdirectcare/img/AdobeStock_350230749.jpeg';
+
+body {
+  font-family: $josefin-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  @media screen and (max-width: 500px) {
+    background-image: none;
+    background-color: $fdc-orange;
+    min-height: initial;
+  }
+
+  header {
+    padding: 1em;
+    text-align: center;
+    background-color: $fdc-orange;
+    text-align: center;
+
+    .logo {
+      max-width: 240px;
+    }
+  }
+
+  main {
+    background-image: linear-gradient($fdc-teal-2, $fdc-teal-2), url($background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex: 1;
+
+    .container {
+ 
+      section {
+        max-width: 480px;
+        margin: auto;
+        padding: 2em;
+        background-color: rgba(239, 230, 217, 0.8);
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+          padding: 1em;
+        }
+  
+        head {
+          h2 {
+            font-size: 1.6em;
+            font-weight: 600;
+          }
+        }
+  
+        hr { 
+          background: #fff;
+          opacity: .5;
+          border-color: #fff;
+        }
+  
+        form {
+          .fields {
+            display: flex;
+            flex-direction: column;
+            max-width: 380px;
+            margin: auto;
+
+            fieldset {
+              display: flex;
+              flex-direction: column;
+              border: groove 2px #ddd;
+              border-radius: 4px;
+              box-sizing: border-box;
+              padding: 0 1rem 1rem;
+
+              input, select {
+                padding: 6px;
+                margin: 1rem 0 0;
+                width: 100%;
+              }
+            }
+
+            fieldset:last-of-type {
+              padding: 0 1em 1em;
+
+              .cols-3 {
+                display: grid;
+                grid-template-columns: auto auto 1fr;
+                column-gap: 10px;
+
+                @media screen and (max-width: 500px) {
+                  grid-template-columns: 1fr;
+                }
+
+                & > div {
+                  input, select {
+                    margin-top: 0;
+
+                    @media screen and (max-width: 500px) {
+                      margin-top: 1em;
+                    }
+                  }
+                }
+              }
+              
+              .hidden-fields {
+                display: none;
+              }
+            }            
+          }
+  
+          .submit-btn .btn.btn-lg {
+            margin-top: 1.5em;
+            background-color: $fdc-teal;
+            color: #fff;
+            border-color: $fdc-teal;
+          }
+        }      
+      }
+    
+      section.thank-you {
+        max-width: none;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 2em;
+    color: #fff;
+    background-color: $fdc-orange;
+  }
+}
