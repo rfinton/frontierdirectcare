@@ -110,6 +110,24 @@ body {
                   }
                 }
               }
+
+              .cols-2 {
+                div {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+
+                  &:first-of-type {
+                    margin-bottom: 1em;
+                  }
+
+                  input {
+                    width: auto;
+                    margin: 0 18px 3px;
+                    padding: 0;
+                  }
+                }
+              }
               
               .hidden-fields {
                 display: none;

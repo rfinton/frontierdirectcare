@@ -1,0 +1,257 @@
+@import "/css/normalize.css";
+@import "/css/main.css";
+
+$josefin-sans: 'Josefin Sans', sans-serif;
+$fdc-orange: rgb(235, 152, 71);
+$fdc-orange-2: rgba(235, 152, 71, .5);
+$fdc-grey: #8c8c8c;
+$fdc-teal: #187994;
+$fdc-teal-2: rgba(24, 121, 148, .5);
+$background-image: 'https://rfinton.github.io/frontierdirectcare/img/AdobeStock_350230749.jpeg';
+
+body {
+  font-family: $josefin-sans;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+
+  @media screen and (max-width: 500px) {
+    background-image: none;
+    background-color: $fdc-orange;
+    min-height: initial;
+  }
+
+  header {
+    padding: 1em;
+    background-color: $fdc-orange;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .logo {
+      max-width: 240px;
+      margin: 1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+    }
+  }
+
+  main {
+    background-image: linear-gradient($fdc-teal-2, $fdc-teal-2), url($background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 2rem 0;
+    background-color: $fdc-teal-2;
+    flex: 1;
+    width: 100%;
+
+    & > header {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-weight: bold;
+      font-size: 2em;
+      display: block;
+
+      a {
+        color: $fdc-orange;
+        text-decoration: underline;
+      }
+    }
+
+    & > div.container {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3em;
+      padding: 1em;
+      
+      @media screen and (max-width: 991px) {
+        grid-template-columns: 1fr;
+      }
+
+      & > section:first-of-type {
+        @media screen and (max-width: 991px) {
+          margin-bottom: 2em;
+        }
+
+        .video-wrap {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      & > section:last-of-type {
+        padding: 2em;
+        background-color: rgba(239, 230, 217, 0.8);
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+          padding: 1em;
+        }
+
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+        }
+
+        h3 {
+          font-size: 1.3em;
+        }
+
+        hr { 
+          background: #fff;
+          opacity: .5;
+          border-color: #fff;
+        }
+
+        p {
+          font-size: 1.3em;
+          max-width: 500px;
+          margin: auto;
+          margin: 1em auto;
+          text-align: left;
+        }
+
+        .benefits {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          color: $fdc-teal;
+          padding: 0 1rem;
+
+          @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+          }
+          
+          .fas {
+            font-size: 4em;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+
+        .fieldset {
+          padding: 1em;
+          border: groove 3px;
+          border-radius: 6px;
+          margin: 0 0 2em;
+
+          @media screen and (max-width: 500px) {
+            text-align: left;
+          }
+
+          .form-check {
+            display: inline-block;
+            margin: 0.5em;
+
+            input {
+              margin-right: 1em;
+            }
+
+            label {
+              vertical-align: text-top;
+            }
+          }
+        }
+
+				.modal-header {
+					background-color: $fdc-teal;
+					color: #fff;
+          flex-direction: column;
+				}
+				.modal-body {
+					background-color: $fdc-teal-2;
+				}
+				.modal-footer {
+					background-color: $fdc-teal;
+					#submit-btn {
+						background-color: $fdc-orange;
+					}
+				}
+
+				.modal-body .fields {
+					display: flex;
+					flex-direction: column;
+					max-width: 380px;
+					margin: auto;
+
+					fieldset {
+						display: flex;
+						flex-direction: column;
+						border: groove 2px #ddd;
+						border-radius: 4px;
+						box-sizing: border-box;
+						padding: 0 1rem 1rem;
+
+						input, select {
+							padding: 6px;
+							margin: 1rem 0 0;
+							width: 100%;
+						}
+					}
+
+					fieldset:last-of-type {
+						padding: 0 1em 1em;
+
+						.cols-3 {
+							display: grid;
+							grid-template-columns: auto auto 1fr;
+							column-gap: 10px;
+
+							@media screen and (max-width: 500px) {
+								grid-template-columns: 1fr;
+							}
+
+							& > div {
+								input, select {
+									margin-top: 0;
+
+									@media screen and (max-width: 500px) {
+										margin-top: 1em;
+									}
+								}
+							}
+						}
+						
+						.hidden-fields {
+							display: none;
+						}
+					}
+				}
+
+        .btn.btn-lg {
+          width: 100%;
+          background-color: $fdc-teal;
+          color: #fff;
+          border-color: $fdc-teal;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $fdc-orange;
+    text-align: center;
+    padding: 2em;
+    color: #fff;
+    width: 100%;
+  }
+}
